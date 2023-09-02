@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/**/*.test.js",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "migrate": "sequelize db:migrate", 
+    "undo-migrate": "sequelize db:migrate:undo:all"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "chai-http": "^4.4.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mysql2": "^3.6.0",

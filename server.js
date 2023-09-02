@@ -17,3 +17,5 @@ app.listen(port, ()=>
     console.log(`Server running on the port ${port}`);
     }
 )
+
+module.exports = app; // Export the Express app instance
