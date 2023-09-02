@@ -2,7 +2,7 @@
 
 # RESTful API in Node.js
 
-This project implements a RESTful API using Node.js and Express.js in Monolith Architecture, with data storage in a relational database (MySQL). The API allows users to manage records, including creation, retrieval, updating, and deletion, while ensuring data integrity and error handling through debugging.
+This project implements a RESTful API using Node.js and Express.js in Monolith Event Driven Architecture, with data storage in a relational database (MySQL). The API allows users to manage records, including creation, retrieval, updating, and deletion, while ensuring data integrity and error handling through debugging.
 
 ![Screenshot](screenshot.png)
 ![Screenshot](screenshot1.png)
@@ -115,3 +115,23 @@ In this section of your `README.md`, you provide step-by-step instructions for u
 Be sure to replace `<repository-url>` and `your-project-directory` with the actual URL of your Git repository and your project's directory name. Adjust the instructions to match your project's specific setup if necessary.
 
 Including clear and concise instructions in your README.md helps users and contributors get your project up and running quickly.
+
+## Summary/Documentation
+   ## Architectural Decisions
+   Project Structure: The project follows a modular structure with separate folders for routes, controllers, models, configuration, migrations, and tests as a Monolith Event Driven Architecture. This organization enhances code maintainability and readability.
+
+   Express.js: Express.js is used as the web framework to handle HTTP requests and responses efficiently.
+
+   Sequelize: Sequelize is chosen as the Object-Relational Mapping (ORM) library for database interactions. It provides an abstraction layer for database operations, making it easy to work with relational databases like MySQL.
+
+   Middleware: Middleware functions are employed for request validation, error handling, and setting up routes.
+
+   Testing: Mocha and Chai are used for unit testing. The npm test script runs tests located in the tests  directory.
+
+   ## Challenges Faced
+   Data Validation: Implementing proper data validation to ensure the integrity of user data was a challenge. I addressed this by using validation libraries and custom middleware.
+
+   Database Configuration: Configuring the database connection and setting up migrations required careful consideration of environment variables and database-specific settings.
+
+   Testing: Writing comprehensive unit tests for all API endpoints was time-consuming but essential for ensuring the reliability of the application while using Mocha, chai for testing.
+
